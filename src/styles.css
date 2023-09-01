@@ -5,7 +5,16 @@
     --background-color: #ae4e1b;
     --border-radius-container: 1.5rem;
     --border-radius-button: 4rem;
-    background-color: var(--background-color);
+    background-image: url(./images/Restaurant.jpeg);
+    background-size: cover;
+}
+
+.page-container {
+    display: grid;
+    grid-template-columns: 95vw;
+    grid-template-rows: 11vh 88vh;
+    padding-left: 2.5%;
+    padding-top: 1%;
 }
 
 #home-text-intro {
@@ -22,22 +31,34 @@
 
 .nav-bar-container {
     background-color: var(--grilledCheeseColor);
+    opacity: .75;
     border: 3px solid var(--borderColor);
     border-radius: var(--border-radius-container);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .nav-button {
     background-color: var(--background-color);
     border-color: var(--borderColor);
-    box-shadow: 1px 2px 2px 1px black;
+    box-shadow: 1px 2px 2px 1px #412100;
     color: white;
     width: 10vw;
+    height: 7.5vh;
     border-radius: var(--border-radius-button);
     font-size: 2.5rem;
 }
 
+.nav-button:hover {
+    box-shadow: 1px 2px 2px 3px #412100;
+    font-weight: 500;
+    color: #412100;
+}
+
 .body-container {
     background-color: var(--grilledCheeseColor);
+    opacity: .5;
     border: 3px solid var(--borderColor);
     border-radius: var(--border-radius-container);
 }

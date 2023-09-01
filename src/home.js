@@ -1,3 +1,3 @@
-import * as ec from "./elementCreation"
+import * as ec from "./elementCreation";
 
 ec.createNavAndBody();
