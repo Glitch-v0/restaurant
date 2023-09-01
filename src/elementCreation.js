@@ -30,18 +30,19 @@ export function styleElementClass (elementClass, styleAttribute, styleValue){
 export function createNavAndBody (){
     // Grid Container to host nav bar and body
     makeElement("div", document.body, "page-container", "page-container-home");
-    makeElement("div", document.getElementById("page-container-home"), "nav-bar-container", "home-nav-container");
-    makeElement("div", document.getElementById("page-container-home"), "body-container", "home-body-container");
+    makeElement("div", document.getElementById("page-container-home"), "nav-bar-container", "nav-container");
+    makeElement("div", document.getElementById("page-container-home"), "body-container", "body-container");
     // Make navbar a grid container for 4 buttons
     const buttonText = ["Home", "Meats", "Veggies", "Desserts"];
     for(let i = 0; i < 4; i++){
-        makeElement("button", document.getElementById("home-nav-container"), "nav-button", `nav-button-${i}`);
+        makeElement("button", document.getElementById("nav-container"), "nav-button", `nav-button-${i}`);
         styleElementID(`nav-button-${i}`, "innerHTML", buttonText[i]);
     }
-    // makeElement("p", document.getElementById("page-container"), "home-text", "home-text-intro");
-    // const introText = "Finally, an amazing restaurant for all of your <b>artisan</b> grilled cheese needs!";
-    // styleElementID("home-text-intro", "innerHTML", introText);
 }
 
+export function deleteElements (){
+   var parent = document.querySelector(".body-container")
+   parent.replaceChildren([]);
+}
 const styleVariable = document.body.style
 styleVariable.flex
