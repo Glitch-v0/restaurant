@@ -1,7 +1,7 @@
 :root {
     font-size: 10px;
     --grilledCheeseColor: #e07135;
-    --borderColor: #eaa077;
+    --borderColor: #fcec9a;
     --background-color: #ae4e1b;
     --border-radius-container: 1.5rem;
     --border-radius-button: 4rem;
@@ -70,26 +70,45 @@
     grid-template-columns: auto;
     grid-template-rows: 1fr 3fr;
 }
+
+.intro-text {
+    text-align: center;
+    justify-content: center;
+}
+
 .picture-container {
     width: 100%;
-    height: 100%;
+    height: 70%;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    gap: 10px;
-    
+    gap: 30px;
+    place-items: center;
+    justify-content: space-around;
 }
 
 .picture-card {
-    background-color: rgb(234, 160, 119, 0.5);
+    background-color: rgb(234, 160, 119, 0.66);
     border: 5px solid var(--borderColor);
-    font-size: 1.75rem;
+    border-radius: var(--border-radius-container);
+    font-size: 2.25rem;
     display: flex;
     flex-direction: column;
-    place-items: center;
+    height: 100%;
 }
 
-.meat-picture {
+.picture-card:hover {
+    box-shadow: 3px 3px 10px 5px white;
+    font-weight: 600;
+}
+.food-picture {
     width: 100%;
     height: 85%;
+}
+
+
+p {
+    align-content: center;
+    text-align: center;
+    overflow: visible;
 }
