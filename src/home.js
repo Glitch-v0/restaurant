@@ -1,7 +1,6 @@
 import * as ec from "./elementCreation";
 
-export function homePage(){
-    ec.createNavAndBody();
+export function homeTab(){
     ec.makeElement("p", document.getElementById("body-container"), "home-text", "home-text-intro");
     const introText = "Finally, an amazing restaurant for all of your <b>artisan</b> grilled cheese needs!";
     ec.styleElementID("home-text-intro", "innerHTML", introText);

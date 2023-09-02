@@ -1,18 +1,19 @@
-import './styles.css'
-import './reset.css'
-import { homePage } from './home'
+import './styles.css';
+import './reset.css';
+import { homeTab } from './home';
 import { meatTab } from './meat';
-import { deleteElements } from './elementCreation';
+import {createNavAndBody, deleteElements } from './elementCreation';
 
-homePage();
+createNavAndBody();
+homeTab();
 const homeButton = document.getElementById("nav-button-0");
 const meatsButton = document.getElementById("nav-button-1");
 const veggiesButton = document.getElementById("nav-button-2");
 const dessertsButton = document.getElementById("nav-button-3");
-console.log(homeButton)
 homeButton.addEventListener("click", ()  => {
     console.log("Clicked home button!");
     deleteElements();
+    homeTab();
 })
 meatsButton.addEventListener("click", ()  => 
     {console.log("Clicked meats button!");
