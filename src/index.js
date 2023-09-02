@@ -6,25 +6,21 @@ import { veggieTab } from './veggie';
 import { dessertTab } from './dessert';
 import {createNavAndBody, deleteElements } from './elementCreation';
 
-createNavAndBody();
-homeTab();
-const homeButton = document.getElementById("nav-button-0");
-const meatsButton = document.getElementById("nav-button-1");
-const veggiesButton = document.getElementById("nav-button-2");
-const dessertsButton = document.getElementById("nav-button-3");
-homeButton.addEventListener("click", ()  => {
-    deleteElements();
+(function () {
+    createNavAndBody();
     homeTab();
-})
-meatsButton.addEventListener("click", ()  => {
-    deleteElements();
-    meatTab();
+    const homeButton = document.getElementById("nav-button-0");
+    const meatsButton = document.getElementById("nav-button-1");
+    const veggiesButton = document.getElementById("nav-button-2");
+    const dessertsButton = document.getElementById("nav-button-3");
+    function tabClick (button, tabFunction) {
+        button.addEventListener("click", ()  => {
+        deleteElements();
+        tabFunction();
     })
-veggiesButton.addEventListener("click", ()  => {
-    deleteElements();
-    veggieTab();
-})
-dessertsButton.addEventListener("click", ()  => {
-    deleteElements();
-    dessertTab();
-})
+    }
+    tabClick(homeButton, homeTab);
+    tabClick(meatsButton, meatTab);
+    tabClick(veggiesButton, veggieTab);
+    tabClick(dessertsButton, dessertTab);
+})()
